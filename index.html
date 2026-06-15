@@ -12,15 +12,15 @@
 <body>
 
    
-   <!-- Шапка сайта -->
+  
 <header class="header">
     <div class="container header-flex">
         <div class="logo">Кровля<span>Профи01</span></div>
         
-        <!-- Кнопка меню для телефонов -->
+       
         <button class="menu-toggle" id="menuBtn" aria-label="Открыть меню">☰</button>
         
-        <!-- Навигация -->
+      
         <nav class="nav" id="navMenu">
             <a href="#services">Услуги</a>
             <a href="#portfolio">Наши работы</a>
@@ -37,18 +37,18 @@
     </div>
 </header>
 
-<!-- Простой скрипт для открытия/закрытия меню и скрытия его при клике на раздел -->
+
 <script>
     const menuBtn = document.getElementById('menuBtn');
     const navMenu = document.getElementById('navMenu');
 
-    // Открытие/закрытие по клику на бургер
+   
     menuBtn.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         menuBtn.innerText = navMenu.classList.contains('active') ? '✕' : '☰';
     });
 
-    // Закрытие меню при клике на любой раздел
+  
     document.querySelectorAll('.nav a').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
@@ -57,7 +57,7 @@
     });
 </script>
 
-    <!-- Главный баннер -->
+   
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-container">
@@ -73,7 +73,7 @@
         </div>
     </section>
 
-    <!-- Цифры компании -->
+ 
     <section class="stats">
         <div class="container grid-4">
             <div class="stat-card">
@@ -85,7 +85,7 @@
                 <p>Сданных крыш</p>
             </div>
             <div class="stat-card">
-                <h3>4 года</h3>
+                <h3>5 лет</h3>
                 <p>Гарантии по договору</p>
             </div>
             <div class="stat-card">
@@ -95,11 +95,11 @@
         </div>
     </section>
 
-    <!-- Услуги и цены -->
+  
     <section id="services" class="services">
         <div class="container">
             <span class="section-subtitle">Направления работы</span>
-            <h2 class="section-title">Наши кровельные услуги</h2>
+            <h2 class="section-title">Услуги по монтажу и ремонту крыш в Майкопе и Белореченске</h2>
             <div class="grid-3">
                 <div class="card">
                     <div class="card-img-wrapper"><img src="service1.jpg" alt="Монтаж под ключ" class="card-img"></div>
@@ -138,13 +138,13 @@
         </div>
     </section>
 
-    <!-- Наши работы / Примеры объектов -->
+    
 <section id="portfolio" class="portfolio">
     <div class="container">
         <span class="section-subtitle">Наш опыт</span>
         <h2 class="section-title">Примеры объектов</h2>
         
-        <!-- ИСПРАВЛЕНО: Чистый класс portfolio-grid без конфликтующих старых сеток -->
+      
         <div class="portfolio-grid">
             
             <!-- Объект 1 -->
@@ -171,7 +171,7 @@
     </div>
 </section>
 
-<!-- Блок Наши Reels Работы -->
+
 <section id="reels-work" class="reels-section">
     <div class="container">
         <span class="section-subtitle">Процесс работы</span>
@@ -207,7 +207,7 @@
     </div>
 </section>
 
-<!-- Скрипт: запускает видео при клике и ставит на паузу при повторном клике -->
+
 <script>
     document.querySelectorAll('.reels-item').forEach(item => {
         const video = item.querySelector('video');
@@ -215,7 +215,7 @@
         
         item.addEventListener('click', () => {
             if (video.paused) {
-                // Останавливаем все другие видео перед запуском нового
+               
                 document.querySelectorAll('video').forEach(v => v.pause());
                 document.querySelectorAll('.reels-play-btn').forEach(b => b.style.display = 'flex');
                 
@@ -240,7 +240,7 @@
             <!-- Отзыв 1: Аслан -->
             <div class="card">
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                    <!-- РАЗМЕР КАРТИНКИ ЗАФИКСИРОВАН В HTML -->
+                  
                     <img src="client1.jpg" alt="Аслан" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #FFCC00; flex-shrink: 0;">
                     <div>
                         <h4 style="margin: 0; font-size: 1.1rem; color: #1f2329;">Аслан</h4>
@@ -254,7 +254,7 @@
             <!-- Отзыв 2: Сергей Николаевич -->
             <div class="card">
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                    <!-- РАЗМЕР КАРТИНКИ ЗАФИКСИРОВАН В HTML -->
+                   
                     <img src="client2.jpg" alt="Сергей Николаевич" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #FFCC00; flex-shrink: 0;">
                     <div>
                         <h4 style="margin: 0; font-size: 1.1rem; color: #1f2329;">Сергей Николаевич</h4>
@@ -268,7 +268,7 @@
             <!-- Отзыв 3: Марина К. -->
             <div class="card">
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                    <!-- РАЗМЕР КАРТИНКИ ЗАФИКСИРОВАН В HTML -->
+                   
                     <img src="client3.jpg" alt="Марина К." style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #FFCC00; flex-shrink: 0;">
                     <div>
                         <h4 style="margin: 0; font-size: 1.1rem; color: #1f2329;">Марина К.</h4>
@@ -307,7 +307,7 @@
                 <div class="step-item">
                     <div class="step-num">04</div>
                     <h4>Гарантия</h4>
-                    <p>Сдача объекта, подписание акта и выдача гарантии на 4 года.</p>
+                    <p>Сдача объекта, подписание акта и выдача гарантии на 5 лет.</p>
                 </div>
             </div>
         </div>
@@ -357,7 +357,7 @@
   </a>
 </div>
 
-   <!-- Минималистичный и незаметный подвал в самом низу -->
+ 
     <footer class="footer" style="background: #ffffff; padding: 15px 0; border-top: 1px solid rgba(0,0,0,0.04); text-align: center; display: block;">
         <div class="container">
             <p style="margin: 0; color: #8e949a; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.3px;">
@@ -365,15 +365,15 @@
             </p>
         </div>
     </footer>
-   <!-- Новое плавающее окно контактов -->
+ 
 <div class="floating-contact-widget">
-  <!-- Кнопка-триггер (круглая иконка в углу) -->
+ 
   <button class="widget-trigger-btn" onclick="toggleWidgetMenu()">
     <span class="widget-icon-open">💬</span>
     <span class="widget-icon-close hidden">✖</span>
   </button>
 
-  <!-- Всплывающий стек с кнопками -->
+  
   <div id="widget-menu" class="widget-menu hidden">
     <a href="https://wa.me" target="_blank" class="widget-link btn-wa">WhatsApp</a>
     <a href="https://t.me" target="_blank" class="widget-link btn-tg">Telegram</a>
@@ -383,7 +383,7 @@
   </div>
 </div>
 
-<!-- Скрипт для работы виджета (открытие/закрытие по клику) -->
+
 <script>
   function toggleWidgetMenu() {
     const menu = document.getElementById('widget-menu');
